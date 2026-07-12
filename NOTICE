@@ -1,0 +1,13 @@
+Musical data notice
+==================
+
+data/wurfelspiel.json was extracted from the
+DiceWaltz-1.2.1WithContredanse package. The package metadata records this
+upstream download location:
+
+http://r.newman.ch/rpi/sounding-off/dwcontredanse.zip
+
+The data consists of historical musical-dice-game selection tables and
+LilyPond measure transcriptions. It is not covered by this repository's MIT
+license. No license was present in the extracted package metadata, so users
+must determine whether their intended use of the transcriptions is permitted.

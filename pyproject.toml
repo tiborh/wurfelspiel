@@ -1,0 +1,11 @@
+[project]
+name = "wurfelspiel"
+version = "0.1.0"
+description = "Generate LilyPond scores from historical musical dice-game tables"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+keywords = ["lilypond", "music", "dice-game", "wurfelspiel"]
+
+[project.urls]
+Repository = "https://github.com/tiborh/wurfelspiel"
