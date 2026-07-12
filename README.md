@@ -29,6 +29,12 @@ The command checks Python 3.10+, LilyPond, TiMidity++, Bash, and the standard
 command-line utilities used by the scripts. It exits with a nonzero status and
 identifies every missing prerequisite.
 
+> **Audio note:** LilyPond supplies the music fonts used to engrave PDFs, but
+> it does not supply the instrument soundfont used for WAV playback. TiMidity++
+> must have a working patch set or SoundFont configuration to synthesize WAV
+> files. The prerequisite checker confirms that `timidity` is installed; it
+> does not validate its SoundFont configuration.
+
 ## Usage
 
 ```bash
