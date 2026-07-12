@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import ast
 import hashlib
 import importlib.util
 import json
@@ -19,6 +20,9 @@ SPEC.loader.exec_module(generator)
 
 
 class DiceParsingTests(unittest.TestCase):
+    def test_generator_uses_python_310_compatible_syntax(self) -> None:
+        ast.parse(SCRIPT.read_text(encoding="utf-8"), filename=str(SCRIPT), feature_version=(3, 10))
+
     def test_parse_dice_requires_sixteen_valid_values(self) -> None:
         with self.assertRaisesRegex(ValueError, "Exactly 16"):
             generator.parse_dice("2,3")

@@ -159,6 +159,7 @@ def default_name(base_name: str | None, piece_name: str, dice: list[int], keep_t
 def lilypond_header(source_package: str, piece: dict, dice: list[int], measures: list[int], args: argparse.Namespace) -> str:
     title = piece["title"]
     subtitle = "Musikalisches Würfelspiel"
+    orientation = " 'landscape" if args.landscape else ""
     lines = [
         f'\\version "{LILYPOND_VERSION}"',
         "\\pointAndClickOff",
@@ -174,7 +175,7 @@ def lilypond_header(source_package: str, piece: dict, dice: list[int], measures:
         "}",
         "",
         "\\paper {",
-        f'  #(set-paper-size "{args.paper_size}"{" \'landscape" if args.landscape else ""})',
+        f'  #(set-paper-size "{args.paper_size}"{orientation})',
         "}",
         "",
     ]
