@@ -31,6 +31,24 @@ measures reproducible; `--dice` accepts exactly 16 values from 2 through 12
 and overrides random rolling. Run `./generate_wurfelspiel.py --help` for all
 options.
 
+## Rendering existing files
+
+The generator's `--render` option is the simplest way to render scores that it
+creates. For arbitrary LilyPond or MIDI files, use the standalone batch
+scripts:
+
+```bash
+./scripts/render_lilypond.sh path/to/score.ly another-score.ly
+./scripts/render_wav.sh output/midi/score.midi
+```
+
+`render_lilypond.sh` writes PDFs to `output/pdf/` and MIDI files to
+`output/midi/`. If a source score lacks a `\midi` block, the script adds one
+only to a temporary copy before rendering. `render_wav.sh` writes WAV files to
+`output/wav/`. Both commands accept multiple input files and provide
+`--pdf-dir`, `--midi-dir`, `--wav-dir`, and executable override options; use
+`--help` for details.
+
 ## Development
 
 Run the standard-library test suite:

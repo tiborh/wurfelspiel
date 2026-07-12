@@ -35,6 +35,18 @@ class DiceParsingTests(unittest.TestCase):
 
 
 class CommandLineTests(unittest.TestCase):
+    def test_batch_script_help_and_syntax(self) -> None:
+        for script_name in ("render_lilypond.sh", "render_wav.sh"):
+            script = ROOT / "scripts" / script_name
+            subprocess.run(["bash", "-n", str(script)], check=True)
+            result = subprocess.run(
+                [str(script), "--help"],
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+            self.assertIn("Usage:", result.stdout)
+
     def test_generation_writes_matching_score_and_manifest(self) -> None:
         dice = [7, 5, 8, 9, 6, 7, 4, 10, 8, 5, 6, 9, 7, 11, 4, 8]
         dice_text = ",".join(map(str, dice))
