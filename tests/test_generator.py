@@ -40,7 +40,7 @@ class DiceParsingTests(unittest.TestCase):
 
 class CommandLineTests(unittest.TestCase):
     def test_batch_script_help_and_syntax(self) -> None:
-        for script_name in ("render_lilypond.sh", "render_wav.sh"):
+        for script_name in ("check_prerequisites.sh", "render_lilypond.sh", "render_wav.sh"):
             script = ROOT / "scripts" / script_name
             subprocess.run(["bash", "-n", str(script)], check=True)
             result = subprocess.run(

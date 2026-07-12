@@ -16,6 +16,19 @@ that historical context and in the generated score's qualified attribution.
 
 The generator has no Python package dependencies.
 
+## Prerequisite check
+
+On Linux, check that the generator and rendering scripts have their required
+tools before use:
+
+```bash
+./scripts/check_prerequisites.sh
+```
+
+The command checks Python 3.10+, LilyPond, TiMidity++, Bash, and the standard
+command-line utilities used by the scripts. It exits with a nonzero status and
+identifies every missing prerequisite.
+
 ## Usage
 
 ```bash
@@ -56,6 +69,11 @@ Run the standard-library test suite:
 ```bash
 python3 -m unittest discover -s tests -v
 ```
+
+## Limitations
+
+The command-line scripts support Linux only. They rely on Bash and standard
+Linux utilities; macOS and Windows are not supported.
 
 ## Data provenance
 
