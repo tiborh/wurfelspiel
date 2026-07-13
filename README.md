@@ -85,14 +85,13 @@ Linux utilities; macOS and Windows are not supported.
 
 `data/wurfelspiel.json` contains the dice tables and LilyPond measure
 transcriptions extracted from the `DiceWaltz-1.2.1WithContredanse` package.
-Its recorded upstream download location is
+The package is licensed under GPL-3.0-or-later. Its recorded upstream download
+location is
 `http://r.newman.ch/rpi/sounding-off/dwcontredanse.zip`. See [NOTICE](NOTICE)
-for the applicable provenance notice. The historical composition may be in the
-public domain, but this repository makes no claim about rights in the
-transcription data.
+for source modules, authorship, and the data transformation.
 
 ## License
 
-The generator, tests, and project documentation are licensed under the
-[MIT License](LICENSE). The musical-data provenance is described separately in
-[NOTICE](NOTICE).
+This project is licensed under the
+[GNU General Public License, version 3 or later](LICENSE). The musical-data
+provenance and upstream notices are in [NOTICE](NOTICE).

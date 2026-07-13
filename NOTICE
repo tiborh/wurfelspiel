@@ -1,13 +1,29 @@
-Musical data notice
-==================
+Upstream data notice
+====================
 
-data/wurfelspiel.json was extracted from the
-DiceWaltz-1.2.1WithContredanse package. The package metadata records this
-upstream download location:
+data/wurfelspiel.json is a JSON transformation of measure-selection tables and
+LilyPond measure transcriptions from DiceWaltz-1.2.1WithContredanse. The
+transformed data comes from these package modules:
+
+- waltzdice/common.py
+- waltzdice/dicelilywaltz.py
+- waltzdice/dicelilycontredanse.py
+
+The upstream package states that DiceLily/DiceAbc version 1.0 is Copyright
+2012 Martin Tarenskeen and licensed under the GNU General Public License,
+version 3 or later. Its source files identify Martin Tarenskeen as author.
+Robin Newman modified the package in August 2013 to add the contredanse data
+and implementation.
+
+The downloaded archive used for this extraction has SHA-256:
+
+59438f0d9cc7b968942b9f6953b0be7b0f44e21c3c045072e058854bc81b8771
+
+Its recorded upstream download location is:
 
 http://r.newman.ch/rpi/sounding-off/dwcontredanse.zip
 
-The data consists of historical musical-dice-game selection tables and
-LilyPond measure transcriptions. It is not covered by this repository's MIT
-license. No license was present in the extracted package metadata, so users
-must determine whether their intended use of the transcriptions is permitted.
+This repository distributes the transformed data and its own source under the
+GNU General Public License, version 3 or later. The historical composition's
+authorship attribution is separate from the copyright and licensing of these
+software transcriptions.
